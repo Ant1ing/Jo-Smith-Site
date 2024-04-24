@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+$text: #fdeaeb;
+$text-hover: #ffffff;
+$background: #171717;
+$primary: #ef5d63;
+$secondary: #DC7FDB;
+$accent: #1de851;
+$link: #505050;
+
+
 * {
     box-sizing: content-box;
 }
@@ -15,8 +24,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2em;
-    background-color: #333;
-    color: #fff;
+    background-color: $background;
+    color: $text;
     height: 60px;
 
     &__logo {
@@ -30,26 +39,26 @@ body {
         flex-grow: 1;
 
         a {
-            color: #fff;
+            color: $text;
             text-decoration: none;
             margin: 0 1em;
             transition: color 0.3s ease;
 
             &:hover {
-                color: #ddd;
+                color: $text-hover;   
             }
         }
     }
 
     &__button {
-        background: linear-gradient(to right, #dc7fdb, #ef5d63);
-        color: #fff;
+        background: linear-gradient(to right, $primary, $secondary);
+        color: $text;
         border: none;
         padding: 0.5em 1em;
         cursor: pointer;
         text-decoration: none;
         border-radius: 20px;
-        transition: background 1s ease; // Add this line
+        transition: background 0.3s ease;
     
         &:hover {
             background: linear-gradient(to right, #e100ff, #ff0055);
@@ -65,12 +74,136 @@ body {
     }
 }
 
-.content {
-    padding: 2em;
+.footer {
+  background-color: $background;
+  padding: 20px 0;
+  color:$text;
+
+  &__container {
+    width: 90%;
+    margin: auto;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__col {
+    flex: 1;
+
+    &.col1{
+      flex: 3;
+    }
+
+    &.col2, &.col3 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    &.col4 {
+        color:$link;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 1em;
+  
+        .footer__link {
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+  }
+
+  .logo {
+    width: 70px;
+    height: auto;
+  }
+
+  &__newsletter-title,
+  &__links-title {
+    font-size: 20px;
+  }
+
+  &__newsletter-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__newsletter {
+    display: flex;
+    margin:30px 0 30px 0;
+
+    &-input {
+        flex: 0.7;
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    &-button {
+        z-index:1000;
+        padding: 10px;
+        background: linear-gradient(to right, $secondary, $primary);
+        border-radius: 0 20px 20px 0;
+        color: $text;
+        border: none;
+
+        &:hover {
+            background: linear-gradient(to right, #e100ff, #ff0055);
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        &:active {
+            background: linear-gradient(to right, $primary, $secondary);
+            color: #ddd;
+        }
+    }
+  }
+
+  &__newsletter-disclaimer {
+    font-size: 14px;
+  }
+
+&__links-list {
+    list-style: none;
+    padding: 10px 0;
+    text-decoration: none;
+
+    li {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between; // adjust this value as needed
+
+        &:last-child {
+            margin-bottom: 0; // remove margin from the last item
+        }
+    }
+
+    a {
+        margin:5px 0;
+        color: $link;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $text-hover;
+        }
+    }
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
+  &__divider{
+    margin: 20px auto;
+    text-align: center;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, $secondary, $primary);
+    border:none;
+  }
 }

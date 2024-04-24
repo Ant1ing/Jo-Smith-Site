@@ -1,26 +1,50 @@
 // import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h3>About Us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <footer className="footer">
+            <div className="footer__container">
+                <div className="footer__row">
+                    <div className="footer__col col1">
+                        <div className="footer__logo">
+                            <Link to="/">
+                                <img className="logo" src="images/josmith.png" alt="Jo Smith Logo" style={{ width: '70px', height: 'auto' }}/>
+                            </Link>
+                        </div>
+                        <h2 className="footer__newsletter-title">Newsletter</h2>
+                        <p className="footer__newsletter-description">Subscribe to our newsletter to get the latest updates</p>
+                        <form className="footer__newsletter">
+                            <input className="footer__newsletter-input" type="email" placeholder="Enter your email" />
+                            <button className="footer__newsletter-button" type="submit">Subscribe</button>
+                        </form>
+                        <p className="footer__newsletter-disclaimer">By Subscribing, you agree to our <b>Privacy Policy</b> and consent to receive updates from our company</p>
                     </div>
-                    <div className="col">
-                        <h3>Contact</h3>
-                        <p>Email: info@example.com</p>
-                        <p>Phone: 123-456-7890</p>
-                    </div>
-                    <div className="col">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
+                    <div className="footer__col col2">
+                        <h3 className="footer__links-title">Links</h3>
+                        <ul className="footer__links-list">
+                            <li><Link className="footer__link spec_link" to="/">Home</Link></li>
+                            <li><Link className="footer__link spec_link" to="/portfolio">Portfolio</Link></li>
+                            <li><Link className="footer__link spec_link" to="/services">Services</Link></li>
+                            <li><Link className="footer__link spec_link" to="/contact">Contact</Link></li>
                         </ul>
+                    </div>
+                    <div className="footer__col col3">
+                        <h3 className="footer__links-title">Social Media</h3>
+                        <ul className="footer__links-list">
+                            <li><a className="footer__link spec_link" href="https://www.facebook.com">Facebook</a></li>
+                            <li><a className="footer__link spec_link" href="https://www.twitter.com">Twitter</a></li>
+                            <li><a className="footer__link spec_link" href="https://www.instagram.com">Instagram</a></li>
+                            <li><a className="footer__link spec_link" href="https://www.linkedin.com">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr className="footer__divider"></hr>
+                <div className="footer__row">
+                    <div className="footer__col col4">
+                        <p className="footer__link">Privacy Policy</p>
+                        <p className="footer__link">Terms of Service</p>
+                        <p className="footer__link">Cookie Settings</p>
                     </div>
                 </div>
             </div>
