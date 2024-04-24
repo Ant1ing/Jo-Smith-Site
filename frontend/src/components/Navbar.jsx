@@ -15,10 +15,10 @@ function Navbar() {
           <Link to="/contact">Contact</Link>
         </div>
         <div className="navbar__button">
-          <button>Learn More</button>
+          <button>See Prices</button>
         </div>
       </nav>
     );
 }
 
-export default Navbar;  // export the Navbar component
+export default Navbar;  

@@ -20,16 +20,21 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2em;
-    background-color: $background;
+    background-color: rgba($background, 0.9);
     color: $text;
-    height: 60px;
+    height: 80px;
+    z-index: 1000;
 
     &__logo {
-        width: 50px;
+        width: 70px;
         height: auto;
     }
 
@@ -58,14 +63,13 @@ body {
         cursor: pointer;
         text-decoration: none;
         border-radius: 20px;
-        transition: background 0.3s ease;
-    
+
         &:hover {
-            background: linear-gradient(to right, #e100ff, #ff0055);
-            color: #ddd; // Changed color on hover
+            background: $primary;
+            color: #ddd; 
         }
+
     }
-    
     &__button button {
         background: none;
         border: none;
@@ -96,10 +100,11 @@ body {
     flex: 1;
 
     &.col1{
-      flex: 3;
+      flex: 2;
     }
 
     &.col2, &.col3 {
+        text-align:center;
         display: flex;
         flex-direction: column;
     }
@@ -124,6 +129,7 @@ body {
   .logo {
     width: 70px;
     height: auto;
+    margin-top:10px;
   }
 
   &__newsletter-title,
@@ -144,6 +150,7 @@ body {
         flex: 0.7;
         padding: 10px;
         margin-right: 10px;
+        border:none;
     }
 
     &-button {
@@ -155,14 +162,9 @@ body {
         border: none;
 
         &:hover {
-            background: linear-gradient(to right, #e100ff, #ff0055);
+            background: $primary;
             color: #ddd;
             cursor: pointer;
-        }
-
-        &:active {
-            background: linear-gradient(to right, $primary, $secondary);
-            color: #ddd;
         }
     }
   }
@@ -175,6 +177,7 @@ body {
     list-style: none;
     padding: 10px 0;
     text-decoration: none;
+    text-align: center;
 
     li {
         display:flex;
@@ -207,3 +210,69 @@ body {
     border:none;
   }
 }
+
+.hero-section {
+    display: flex;
+    height: 100vh; 
+  
+    .hero-image {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, $background, rgba(23, 23, 23, 0));
+        z-index: 1;
+      }
+      
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 110%;
+        background: linear-gradient(to top, $background, rgba(23, 23, 23, 0));
+        z-index: 1;
+      }
+    
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    .hero-content {
+      background-color:$background;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em; 
+      color: white; 
+  
+      h1 {
+        font-size: 3.5em; 
+        margin-bottom: 0.2em;
+        text-align:center;
+  
+        .highlight {
+          color: $secondary; 
+        }
+      }
+  
+      p {
+        font-size: 1.2em; 
+        margin-bottom: 2em; 
+        text-align:center;
+      }
+    }
+  }

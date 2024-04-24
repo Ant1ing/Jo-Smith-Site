@@ -1,12 +1,13 @@
 // import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import HeroSec from '../components/Home/HeroSec';
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <h1>Welcome to the Home Page</h1>
+      <HeroSec />
       <Footer />
     </div>
   );

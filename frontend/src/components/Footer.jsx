@@ -1,7 +1,10 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
+
     return (
         <footer className="footer">
             <div className="footer__container">
@@ -32,10 +35,10 @@ const Footer = () => {
                     <div className="footer__col col3">
                         <h3 className="footer__links-title">Social Media</h3>
                         <ul className="footer__links-list">
-                            <li><a className="footer__link spec_link" href="https://www.facebook.com">Facebook</a></li>
-                            <li><a className="footer__link spec_link" href="https://www.twitter.com">Twitter</a></li>
-                            <li><a className="footer__link spec_link" href="https://www.instagram.com">Instagram</a></li>
-                            <li><a className="footer__link spec_link" href="https://www.linkedin.com">LinkedIn</a></li>
+                            <li><a className="footer__link spec_link" href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                            <li><a className="footer__link spec_link" href="https://www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                            <li><a className="footer__link spec_link" href="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                            <li><a className="footer__link spec_link" href="https://www.linkedin.com"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                         </ul>
                     </div>
                 </div>
