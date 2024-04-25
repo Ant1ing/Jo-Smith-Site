@@ -4,6 +4,7 @@ const HeroSec = () => {
     return (
         <div className="hero-section">
             <div className="hero-content">
+                <img src="../images/josmithLONG.png" alt="Hero Image" className="hero-logo"/>
                 <h1>Creating <span className="highlight">Lasting</span> Memories</h1>
                 <p>Capturing beautiful moments that last a lifetime</p>
                 <div className="navbar__button">

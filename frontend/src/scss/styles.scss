@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-$text: #fdeaeb;
-$text-hover: #ffffff;
-$background: #171717;
+$text: #171717;
+$text-hover: #3a3a3a;
+$background: #f3efe8;
 $primary: #ef5d63;
 $secondary: #DC7FDB;
-$accent: #1de851;
-$link: #505050;
+$accent: #89d373;
+$link: #c5c5c5;
 
 
 * {
@@ -14,9 +14,43 @@ $link: #505050;
 }
 
 body {
+    
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+
+    .highlight {
+      color: $accent; 
+    }
+    
+    .highlight2 {
+      color: $text; 
+    }
+
+    .feature1-decorators {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em; // adjust as needed
+
+      .feature1-decorator {
+        margin: 20px auto;
+        text-align: center;
+        height: 2px;
+        width: 80%;
+        background: linear-gradient(to right, $secondary, $primary);
+        border:none; // adjust as needed
+      }
+
+      .feature1-decorated-text {
+        margin: 0 2em; // adjust as needed
+        font-size: 1.2em; // adjust as needed
+        font-style: italic; // adjust as needed
+        color: #000; // adjust as needed
+        background-color: #fff; // adjust as needed
+        padding: 0 0.5em; // adjust as needed
+        white-space: nowrap; // added this line to make the text sit on one line  
+      }
+    }
 }
 
 .navbar {
@@ -66,7 +100,7 @@ body {
 
         &:hover {
             background: $primary;
-            color: #ddd; 
+            color: #2c2c2c; 
         }
 
     }
@@ -163,7 +197,7 @@ body {
 
         &:hover {
             background: $primary;
-            color: #ddd;
+            color: $text;
             cursor: pointer;
         }
     }
@@ -214,6 +248,12 @@ body {
 .hero-section {
     display: flex;
     height: 100vh; 
+
+    .hero-logo {
+        width: 200px;
+        height: auto;
+        margin-top:10px;
+    }
   
     .hero-image {
       flex: 1;
@@ -227,7 +267,6 @@ body {
         left: 0;
         width: 50%;
         height: 100%;
-        background: linear-gradient(to right, $background, rgba(23, 23, 23, 0));
         z-index: 1;
       }
       
@@ -238,7 +277,6 @@ body {
         right: 0;
         width: 100%;
         height: 110%;
-        background: linear-gradient(to top, $background, rgba(23, 23, 23, 0));
         z-index: 1;
       }
     
@@ -257,16 +295,12 @@ body {
       justify-content: center;
       align-items: center;
       padding: 2em; 
-      color: white; 
+      color: $text; 
   
       h1 {
         font-size: 3.5em; 
         margin-bottom: 0.2em;
         text-align:center;
-  
-        .highlight {
-          color: $secondary; 
-        }
       }
   
       p {
@@ -276,3 +310,294 @@ body {
       }
     }
   }
+
+.feature1-container {
+    height:100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em; // adjust as needed
+  
+    .feature1-left {
+      text-align:center;
+      align-items: center;
+      flex: 1;
+      padding-right: 1em; // adjust as needed
+  
+      .feature1-title {
+        font-size: 3em; // adjust as needed
+        font-weight: bold; // adjust as needed
+        margin-bottom: 1em; // adjust as needed
+      }
+  
+      .feature1-description {
+        font-size: 1.2em; // adjust as needed
+  
+        p {
+          line-height: 1.5; // adjust as needed
+        }
+      }
+    }
+  
+    .feature1-right {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      padding-left: 1em; // adjust as needed
+  
+      .feature1-image {
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .gallery-container {
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto; // Take up full viewport height
+    margin: auto; // Center vertically and horizontally
+  
+    .image-title-overlay {
+      font-size: 3em;
+      text-align: center;
+      margin:40px;
+      color: $primary;
+      text-decoration: underline;
+    }
+  
+    .triple-image-display {
+      display: flex;
+      justify-content: center; // Center images horizontally
+      align-items: center; // Center images vertically
+      width: 90%; 
+      padding: 0 40px;
+      box-sizing: border-box;
+  
+      .image-container {
+        flex: 1;
+        align-items: center;
+        margin: 0px 20px 0 20px;
+        height: 600px;
+        position: relative;
+  
+        .image-icon {
+          position: absolute;
+          bottom: 10px;
+          right: 25px;
+          font-size: 32px;
+          color: $link;
+          background: none;
+          border-radius: 20px;
+          padding: 5px;
+          cursor: pointer;
+          z-index: 2;
+        }
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          box-shadow: 4px 4px 4px rgba(29, 29, 29, 0.418);
+        }
+      }
+    }
+
+  .gallery-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    button {
+      margin: 40px;
+      background: None;
+      border: none;
+      color: $accent;
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.925);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+
+    .image-details {
+      position: relative;
+      width: 20%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: $background;
+      padding: 20px;
+      margin-left:5%;
+      border-radius: 20px;
+
+      .feature1-decorators {
+      margin-bottom: 1em;
+      }
+
+      .feature1-description {
+      text-align: center;
+      }
+
+
+      .feature1-decorators {
+        display: flex;
+        align-items: center;
+        width:80%;
+        margin-bottom: 1em; // adjust as needed
+
+        .feature1-decorator {
+          margin: 20px;
+          text-align: center;
+          height: 2px;
+          width: 80%;
+          background: linear-gradient(to right, $secondary, $primary);
+          border:none; // adjust as needed
+        }
+
+        .feature1-decorated-text {
+          font-size: 1.2em; // adjust as needed
+          font-style: italic; // adjust as needed
+          color: #000; // adjust as needed
+          margin:0;
+          background:none;
+          padding: 0 5px; // adjust as needed
+          white-space: nowrap; // added this line to make the text sit on one line
+        }
+      }
+    }
+
+    img {
+        max-width: 50%;
+        max-height: 90%;
+    }
+
+    button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: $accent;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  margin:40px;
+
+  .dot {
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      background: $accent;
+      margin:5px;
+      cursor: pointer;
+
+      &.hover {
+          background: $secondary;
+      }
+
+      &.active {
+          background: $text;
+      }
+    }
+  }
+}
+
+.cta-section {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f3f3f3de;
+  background-image: url('../images/bookingSec.jpeg');
+  background-attachment: fixed; // Create parallax effect
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta-content {
+  text-align: center;
+  background-color: #17171781;
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .cta-header {
+    margin:0;
+    font-size: 2em;
+    color: $text;
+  }
+
+  .cta-text {
+    color: $link;
+    margin-bottom:30px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .cta-button-div {
+        background: linear-gradient(to right, $primary, $secondary);
+        color: $text;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 20px;
+
+        &:hover {
+            background: $primary;
+            color: #2c2c2c; 
+        }
+
+    }
+
+    
+
+    .cta-button {
+      background: none;
+      border: none;
+      color: $text;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $text-hover;
+      }
+    }
+  }
+}

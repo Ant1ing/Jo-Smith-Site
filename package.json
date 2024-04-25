@@ -28,6 +28,7 @@
     "mongoose": "^8.3.2",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "^3.0.1",
     "watch": "^0.13.0"
   },
