@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faXTwitter, faInstagram, faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
 
@@ -11,9 +11,12 @@ const Footer = () => {
                 <div className="footer__row">
                     <div className="footer__col col1">
                         <div className="footer__logo">
-                            <Link to="/">
+                            <a href="#" onClick={(e) => {
+                                e.preventDefault();
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}>
                                 <img className="logo" src="images/josmith.png" alt="Jo Smith Logo" style={{ width: '70px', height: 'auto' }}/>
-                            </Link>
+                            </a>
                         </div>
                         <h2 className="footer__newsletter-title">Newsletter</h2>
                         <p className="footer__newsletter-description">Subscribe to our newsletter to get the latest updates</p>
@@ -33,10 +36,10 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer__col col3">
-                        <h3 className="footer__links-title">Social Media</h3>
+                        <h3 className="footer__links-title">Social </h3>
                         <ul className="footer__links-list">
                             <li><a className="footer__link spec_link" href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                            <li><a className="footer__link spec_link" href="https://www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                            <li><a className="footer__link spec_link" href="https://www.twitter.com"><FontAwesomeIcon icon={faXTwitter} /></a></li>
                             <li><a className="footer__link spec_link" href="https://www.instagram.com"><FontAwesomeIcon icon={faInstagram} /></a></li>
                             <li><a className="footer__link spec_link" href="https://www.linkedin.com"><FontAwesomeIcon icon={faLinkedin} /></a></li>
                         </ul>

@@ -8,7 +8,7 @@ const Booking = () => {
                 <p className="cta-text">If you like what you see why not contact us to discuss what package would best fit you or go straight to the pricing section now!</p>
                 <div className="cta-buttons">
                     <div className="cta-button-div">
-                        <button className="cta-button">Book Now</button>
+                        <button className="cta-button">See Prices</button>
                     </div>
                     <div className="cta-button-div">
                         <button className="cta-button">Contact</button>

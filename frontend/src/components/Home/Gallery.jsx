@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -67,6 +67,15 @@ const Gallery = () => {
         }
     ];
 
+    useEffect(() => {
+        imageGroups.forEach(group => {
+            group.images.forEach(image => {
+                const img = new Image();
+                img.src = image.src;
+            });
+        });
+    }, []);
+
     const handleImageClick = (image) => {
         console.log('Image clicked', image);
         setSelectedImage(image);
@@ -85,7 +94,7 @@ const Gallery = () => {
         <h2 className='image-title-overlay'><span className="highlight2">{imageGroups[currentGroupIndex].title}</span></h2>
             
         
-        <div className="triple-image-display">
+        <div className={`triple-image-display`}>
             {imageGroups[currentGroupIndex].images.map((image, index) => (
                 <div key={index} className="image-container">
                     <img

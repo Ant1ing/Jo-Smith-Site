@@ -1,12 +1,15 @@
 // import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PricingSec from '../components/Services/PricingSec';
+import Testimonials from '../components/Services/Testimonials';
 
 const ServicesPage = () => {
   return (
     <div>
       <Navbar />
-      <h1>Services Page</h1>
+      <Testimonials />
+      <PricingSec />
       <Footer />
     </div>
   );
