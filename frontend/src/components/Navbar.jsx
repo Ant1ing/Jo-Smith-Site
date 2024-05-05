@@ -15,7 +15,7 @@ function Navbar() {
         <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
       </div>
       <div className="navbar__button">
-        <button>See Prices</button>
+        <Link to="/services"><button>See Prices</button></Link>
       </div>
     </nav>
   );

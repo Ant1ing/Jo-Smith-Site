@@ -1,4 +1,5 @@
 // import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Booking = () => {
     return (
@@ -8,10 +9,10 @@ const Booking = () => {
                 <p className="cta-text">If you like what you see why not contact us to discuss what package would best fit you or go straight to the pricing section now!</p>
                 <div className="cta-buttons">
                     <div className="cta-button-div">
-                        <button className="cta-button">See Prices</button>
+                        <Link to="/services" className="cta-button">See Prices</Link>
                     </div>
                     <div className="cta-button-div">
-                        <button className="cta-button">Contact</button>
+                        <Link to="/contact" className="cta-button">Contact</Link>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,17 @@
 // import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ContactForm from '../components/Contact/ContactForm';
+import FAQs from '../components/Contact/FAQs';
+import MapsInt from '../components/Contact/MapsInt';
 
 const ContactPage = () => {
     return (
         <div>
             <Navbar />
-            <h1>Contact Page</h1>
-            {/* Add your contact form or content here */}
+            <ContactForm />
+            <FAQs />
+            <MapsInt />
             <Footer />
         </div>
     );

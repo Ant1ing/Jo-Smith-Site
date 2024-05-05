@@ -2,13 +2,13 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PricingSec from '../components/Services/PricingSec';
-import Testimonials from '../components/Services/Testimonials';
+import TestimonialsCarousel from '../components/Services/Testimonials';
 
 const ServicesPage = () => {
   return (
     <div>
       <Navbar />
-      <Testimonials />
+      <TestimonialsCarousel />
       <PricingSec />
       <Footer />
     </div>
