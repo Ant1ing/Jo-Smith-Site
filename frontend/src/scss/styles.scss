@@ -76,9 +76,58 @@ body {
     width: 70px;
     height: auto;
     margin-left:30px;
+  }
 
-    @media (max-width: 768px) { // Adjust this value to the breakpoint you want
-      margin-left:-15px;
+  &__burger {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    background: none ;
+    border:none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    &:before,
+    &:after,
+    & div {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $primary;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:before {
+      top: 5px;
+    }
+
+    &:after {
+      bottom: 5px;
+    }
+
+    & div {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.open {
+      &:before {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &:after {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      & div {
+        opacity: 0;
+      }
     }
   }
 
@@ -111,6 +160,27 @@ body {
         }
       }
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &.open{
+      display: flex;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: rgba($background, 0.9);
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      z-index: 1000;
+
+      a {
+        margin: 1em 0;
+      }
+    }
   }
 
   &__button {
@@ -125,11 +195,6 @@ body {
     transition: background-color 0.3s ease;
     text-wrap: nowrap;
 
-    @media (max-width: 768px) { // Adjust this value to the breakpoint you want
-      padding: 10px;
-      margin-right:-20px;
-    }
-
     &:hover {
       background: $primary;
       color: $accent; 
@@ -140,6 +205,42 @@ body {
       border: none;
       color: $text;
       cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    padding: 0 1em;
+
+    &__logo {
+      margin-left: 0;
+    }
+
+    &__links {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: rgba($background, 0.9);
+      flex-direction: column;
+      align-items: center;
+      display: none;
+
+      a {
+        margin: 1em 0;
+      }
+    }
+
+    &__burger {
+      display: block;
+    }
+
+    &__button {
+      display: none;
     }
   }
 }
@@ -152,6 +253,10 @@ body {
     display: flex;
     height: 100vh; 
 
+    @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+      flex-direction: column;
+    }
+
     .hero-logo {
         width: 200px;
         height: auto;
@@ -162,6 +267,10 @@ body {
       flex: 1;
       position: relative;
       overflow: hidden;
+
+      @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+        display: none;
+      }
   
       &::before {
         content: "";
@@ -215,7 +324,7 @@ body {
 }
 
 .feature1-container {
-  max-height:100vh;
+  min-height:100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -320,6 +429,10 @@ body {
       padding: 0 40px;
       box-sizing: border-box;
 
+      @media (max-width: 768px) { 
+        flex-direction: column;
+      }
+
       &.slide-left {
         transform: translateX(-100%);
       }
@@ -334,6 +447,14 @@ body {
         margin: 0px 20px 0 20px;
         height: 600px;
         position: relative;
+        overflow: hidden;
+
+
+        @media (max-width: 768px) { 
+          max-height: 300px;
+          margin: 20px 0;
+
+        }
   
         .image-icon {
           position: absolute;
@@ -349,9 +470,14 @@ body {
         }
   
         img {
-          width: 100%;
+          width:100%;
           height: 100%;
           object-fit: cover;
+
+          @media (max-width: 768px) { 
+            object-fit: contain;
+  
+          }
         }
       }
     }
@@ -365,7 +491,7 @@ body {
     transform: translateY(-50%);
 
     button {
-      margin: 40px;
+      margin: 20px;
       background: None;
       border: none;
       color: $accent;
@@ -776,6 +902,7 @@ body {
 
   .heroSec2 {
     min-height: 70vh;
+    width:100%;
     background-color: $background;
     margin:auto;
   
@@ -809,6 +936,14 @@ body {
         backdrop-filter: blur(5px); // Adjust the blur value as needed
         z-index: 1;
       }
+
+      @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+      }
     
       > * {
         position: relative;
@@ -829,7 +964,7 @@ body {
   
         @media (max-width: 768px) { // Adjust this value to the breakpoint you want
           width: 100%;
-          margin: 10px 0;
+          margin:0;
         }
   
         &--header {
@@ -839,7 +974,6 @@ body {
           @media (max-width: 768px) { // Adjust this value to the breakpoint you want
             font-size: 30px;
             text-align: center;
-            margin: 10px 0;
           }
         }
   
@@ -925,7 +1059,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+    @media (max-width: 1000px) { // Adjust this value to the breakpoint you want
       flex-direction: column;
       margin:10px;
     }
@@ -937,7 +1071,7 @@ body {
       justify-content: center;
       align-items: center;
 
-      @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+      @media (max-width: 1000px) { // Adjust this value to the breakpoint you want
         width: 100%;
         flex-direction: column;
       }
@@ -948,7 +1082,7 @@ body {
         height:267px;
         width:auto;
         
-        @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+        @media (max-width: 1000px) { // Adjust this value to the breakpoint you want
           border-bottom: 5px solid $accent;
         }
       }
@@ -960,7 +1094,7 @@ body {
         margin-left: 20px;
         max-width: 50%;
 
-        @media (max-width: 768px) { // Adjust this value to the breakpoint you want
+        @media (max-width: 1000px) { // Adjust this value to the breakpoint you want
           margin: 10px 0px;
           max-width: 100%;
           align-items: center;
@@ -1061,6 +1195,18 @@ body {
         margin: 0 auto 2em;
       }
 
+      @media (max-width:700px) {
+        width: 80%;
+        height: 60vh;
+        margin: 0 auto 2em;
+      }
+
+      @media (max-width: 400px) {
+        width: 90%;
+        height: 82vh;
+        margin: 0 auto 2em;
+      }
+
       .card-title {
         margin: 0;
         font-size: 2em;
@@ -1078,6 +1224,10 @@ body {
         list-style-type: none;
         padding: 0;
         margin-top: 20px;
+
+        @media (max-width: 700px) {
+          margin-bottom:40px;
+        }
 
         .feature-item {
           font-size: 1em;
@@ -1345,7 +1495,7 @@ body {
     @media (max-width: 500px) { // Adjust this value to the breakpoint you want
       width: 100%;
       height: 300px;
-      
+      padding:0;
     }
 
     iframe {

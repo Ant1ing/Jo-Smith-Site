@@ -49,17 +49,17 @@ const Gallery = () => {
             title: "Third Group",
             images: [
                 {
-                    src: "../images/josmithLONG.png",
+                    src: "../images/image7.jpg",
                     title: "Woman",
                     description: "A beautiful woman"
                 },
                 {
-                    src: "../images/josmithLONG.png",
+                    src: "../images/image8.jpg",
                     title: "Man",
                     description: "A handsome man"
                 },
                 {
-                    src: "../images/josmithLONG.png",
+                    src: "../images/image9.jpg",
                     title: "Child",
                     description: "A cute child"
                 }

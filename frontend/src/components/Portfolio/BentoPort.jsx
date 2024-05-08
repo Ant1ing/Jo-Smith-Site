@@ -1,19 +1,21 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import BentoContent from './BentoContent';
 
 const BentoPort = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [selectedContent, setSelectedContent] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedContent, setSelectedContent] = useState(null);
+  const contentRef = useRef(null);
 
-    const handleClick = (image, content) => {
-        if (selectedImage === image) {
-            setSelectedImage(null);
-            setSelectedContent(null);
-        } else {
-            setSelectedImage(image);
-            setSelectedContent(content);
-        }
-    };
+  const handleClick = (image, content) => {
+    if (selectedImage === image) {
+      setSelectedImage(null);
+      setSelectedContent(null);
+    } else {
+      setSelectedImage(image);
+      setSelectedContent(content);
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
     const imageContent = {
         "../images/bento1.jpg": { 
@@ -40,7 +42,7 @@ const BentoPort = () => {
         },
         "../images/bento3.jpg": { 
             title: "The Darkness Of Life", 
-            tags: ["Photography", "Landscape", "Nature", "Monochromatic"],
+            tags: ["Photography", "Landscape", "Nature"],
             paragraph: "The Darkness Of Life was taken in the Scottish Highlands, the dark and moody atmosphere of the image makes for a great contrast with the natural beauty of the landscape.",
             clientInfo: {
                 client: "Passion Project",
@@ -98,7 +100,7 @@ const BentoPort = () => {
                     </div>
                 ))}
             </div>
-            <div className="galleryImage">
+            <div className="galleryImage" ref={contentRef}>
                 {selectedImage && selectedContent && <BentoContent image={selectedImage} content={selectedContent} />}
             </div>
         </section>

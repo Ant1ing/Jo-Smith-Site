@@ -5,27 +5,27 @@ const PricingSec = () => {
     {
       title: 'Large Print',
       price: '£60',
-      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/Styles/Backgrounds', '25 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 12x8"'], 
+      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/ Styles/ Backgrounds', '25 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 12x8"'], 
     },
     {
       title: 'Extra Large Print',
       price: '£80',
-      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/Styles/Backgrounds', '35 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 18x12"'],
+      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/ Styles/ Backgrounds', '35 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 18x12"'],
     },
     {
       title: 'Extra Large Print +',
       price: '£125',
-      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/Styles/Backgrounds', '50 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 18x12" with 2 12x8"'],
+      features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/ Styles/ Backgrounds', '50 Overall Photos', 'USB Stick with Images', 'Favourite Image Printed at 18x12" with 2 12x8"'],
     },
     {
         title: 'Digital 10',
         price: '£190',
-        features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/Styles/Backgrounds', '50 Overall Photos', 'Secure Online Image Hosting', 'Favourite 10 Images Digitally Enhanced'],
+        features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/ Styles/ Backgrounds', '50 Overall Photos', 'Secure Online Image Hosting', 'Favourite 10 Images Digitally Enhanced'],
     },
     {
         title: 'Digital 25',
         price: '£250',
-        features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/Styles/Backgrounds', '60 Overall Photos', 'Secure Online Image Hosting', 'Favourite 25 Images Digitally Enhanced'],
+        features: ['One Hour Session', 'Studio Quality Photos', 'Different Outfits/ Styles/ Backgrounds', '60 Overall Photos', 'Secure Online Image Hosting', 'Favourite 25 Images Digitally Enhanced'],
     },
   ];
 
